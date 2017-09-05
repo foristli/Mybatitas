@@ -29,10 +29,6 @@ public class DBOperation {
 		SqlSession session = ssf.openSession();
 		try
 		{
-			//System.out.println("before insert:"+usr);
-			//session.insert("add",usr);
-			//Thread.sleep(8000);
-			//session.commit();
 			
 			Employee emp=null;
 			emp=(Employee)session.selectOne("selectUser", 1);
@@ -46,5 +42,29 @@ public class DBOperation {
 			session.close();
 		}
 	
+	}
+	
+	public void insertEmployee()
+	{
+		SqlSessionFactory ssf=new SqlSessionFactoryBuilder().build(reader);
+		SqlSession session = ssf.openSession();
+		try
+		{
+			
+			Employee emp=new Employee();
+			emp.setName("tomcat");
+			emp.setAge(34);
+			emp.setSalary(34000);
+			session.insert("testinsert", emp);
+			System.out.println(emp.toString());
+			session.commit();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			session.close();
+		}
 	}
 }

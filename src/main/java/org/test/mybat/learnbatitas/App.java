@@ -10,6 +10,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         DBOperation dbops=new DBOperation();
-        dbops.selectUser();
+        //dbops.selectUser();
+        dbops.insertEmployee();
     }
 }

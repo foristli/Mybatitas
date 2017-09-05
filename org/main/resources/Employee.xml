@@ -7,4 +7,9 @@
     	select * from employee where id =1  
    </select>  
    
+   <insert id="testinsert" useGeneratedKeys="true" keyProperty="id" parameterType="Employee" >
+   	    insert into employee (name,age,salary) values (#{name},#{age},#{salary})
+   </insert>
+   
+   
 </mapper>

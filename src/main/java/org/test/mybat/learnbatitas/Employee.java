@@ -4,7 +4,7 @@ public class Employee {
    private int id;
    private String name;
    private int age;
-   private String salary;
+   private int salary;
    
    
    
@@ -14,7 +14,7 @@ public Employee() {
 }
 
 
-public Employee(int id,String name, int age, String salary) {
+public Employee(int id,String name, int age, int salary) {
 	super();
 	this.id=id;
 	this.name = name;
@@ -35,16 +35,19 @@ public int getAge() {
 public void setAge(int age) {
 	this.age = age;
 }
-public String getSalary() {
+public int getSalary() {
 	return salary;
 }
-public void setSalary(String salary) {
+public void setSalary(int salary) {
 	this.salary = salary;
 }
+
+
 @Override
 public String toString() {
-	return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + "]";
+	return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", salary=" + salary + "]";
 }
+
    
    
    
