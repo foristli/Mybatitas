@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.test.mybat.learnbatitas.Employee;
 
+
 public class DBOperation {
 	private String resource;
 	private Reader reader;
